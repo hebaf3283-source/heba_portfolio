@@ -81,13 +81,38 @@
             align-items: center;
             justify-content: center;
             padding: 0 8%;
-            padding-top: 80px;
+            padding-top: 100px;
+            padding-bottom: 40px;
             text-align: center;
             background: radial-gradient(circle at top, #1e293b 0%, #0f172a 70%);
         }
 
         .hero-content {
             max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Profile Image Styles */
+        .profile-img-container {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+            transition: var(--transition);
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.5);
         }
 
         .hero h1 {
@@ -416,6 +441,11 @@
                 font-size: 2.2rem;
             }
 
+            .profile-img {
+                width: 130px;
+                height: 130px;
+            }
+
             .section {
                 padding: 4rem 5%;
             }
@@ -439,6 +469,9 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
+            <div class="profile-img-container">
+                <img src="profile.jpg" alt="Heba Fathy" class="profile-img">
+            </div>
             <h1>Hi, I'm <span>Heba Fathy</span></h1>
             <h2>Full-Stack & Mobile Application Developer</h2>
             <p>Computer Science student with experience in Agile workflows, microservices backend architecture, cross-platform Flutter mobile development, and relational database design.</p>
